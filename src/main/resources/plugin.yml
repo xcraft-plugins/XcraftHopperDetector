@@ -1,0 +1,32 @@
+name: XcraftHopperDetector
+main: de.xcraft.voronwe.hopper.HopperDetector
+version: 1.14.4
+api-version: 1.14
+
+description: Detect hoppers and teleport to it.
+authors: [Voronwe, hwei, MyNameIsJan]
+commands:
+  hd:
+    aliases: hopperdetector
+    description: Hopper Detector.
+    usage: Type /hd ? to get more help.
+permissions:
+  hopperdetector.*:
+    description: Gives access to use this plugin.
+    default: op
+    children:
+      hopperdetector: true
+      hopperdetector.start: true
+      hopperdetector.stop: true
+      hopperdetector.list: true
+      hopperdetector.tp: true
+  hopperdetector:
+    description: Show status of plugin.
+  hopperdetector.start:
+    description: Start scan.
+  hopperdetector.stop:
+    description: Stop scan.
+  hopperdetector.list:
+    description: List locations of hopper activities.
+  hopperdetector.tp:
+    description: Teleport a player to a location in list.
